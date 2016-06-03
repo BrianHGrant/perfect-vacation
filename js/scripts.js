@@ -1,14 +1,5 @@
 // Business logic
 
-// var validateInput = function(inputToValidate) {
-//   if (inputToValidate === null) {
-//     return false;
-//   }
-//   else {
-//     return true;
-//   }
-// }
-
 var findVacation = function(gender, preference, taste, alcohol, fun, name, age, pleasure) {
   if (alcohol === "tea") {
     $("#saltlakecity").removeClass("hide");
