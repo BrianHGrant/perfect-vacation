@@ -22,7 +22,7 @@
             <!-- GENDER -->
             <div class="col-sm-2">
               <p>Gender</p>
-              <select class="form-control">
+              <select class="form-control" id="genderOption">
                 <option>Male</option>
                 <option>Female</option>
                 <option value="other">Not listed</option>
@@ -30,99 +30,106 @@
             </div>
             <!-- Preference -->
             <div class="col-sm-2">
-              <p>Which do you enjoy most:</p>
+              <p>What do you enjoy most:</p>
               <div class="radio">
                 <label>
-                  <input type="radio" name="preferRadio" id="adventure">Adventure</input>
+                  <input type="radio" name="preferRadio" value="adventure">
+                  Adventure
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="preferRadio" id="luxury">Luxury</input>
+                  <input type="radio" name="preferRadio" value="luxury">
+                  Luxury
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="preferRadio" id="romance">Romance</input>
+                  <input type="radio" name="preferRadio" value="history">
+                  History
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="preferRadio" id="history">History</input>
+                  <input type="radio" name="preferRadio" value="romance">
+                  Romance
                 </label>
               </div>
             </div>
+            <!-- TASTE -->
             <div class="col-sm-2">
               <p>You have a taste for:</p>
               <div class="radio">
                 <label>
-                  <input type="radio" name="tasteRadio" id="sweet">Sweet</input>
+                  <input type="radio" name="tasteRadio" value="sweet">
+                  Sweet
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="tasteRadio" id="savory">Savory</input>
+                  <input type="radio" name="tasteRadio" value="savory">
+                  Savory
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="tasteRadio" id="spicy">Spicy</input>
+                  <input type="radio" name="tasteRadio" value="spicy">
+                  Spicy
                 </label>
               </div>
-
             </div>
+            <!-- ALCOHOL -->
             <div class="col-sm-2">
               <p>What's your favorite alcohol?</p>
               <div class="radio">
                 <label>
-                  <input type="radio" name="alcoholRadio" id="whiskey">Whiskey</input>
+                  <input type="radio" name="alcoholRadio" value="whiskey">Whiskey
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="alcoholRadio" id="rum">Rum</input>
+                  <input type="radio" name="alcoholRadio" value="rum">Rum
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="alcoholRadio" id="wine">Wine</input>
+                  <input type="radio" name="alcoholRadio" value="wine">Wine
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="alcoholRadio" id="beer">Beer</input>
+                  <input type="radio" name="alcoholRadio" value="beer">Beer
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="alcoholRadio" id="tea">I'm a tea-tottler</input>
+                  <input type="radio" name="alcoholRadio" value="tea">I'm a tea-tottler
                 </label>
               </div>
-
             </div>
           </div>
-
           <div class="row">
+            <!-- FUN -->
             <div class="col-sm-2">
               <p>For fun I like to go to...</p>
               <div class="radio">
                 <label>
-                  <input type="radio" name="funRadio" id="woods">the woods.</input>
+                  <input type="radio" name="funRadio" value="woods">the woods.
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="funRadio" id="urban">an urban mecca.</input>
+                  <input type="radio" name="funRadio" value="urban">an urban mecca.
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="funRadio" id="beach">the beach.</input>
+                  <input type="radio" name="funRadio" value="beach">the beach.
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="funRadio" id="woods">the ski slopes.</input>
+                  <input type="radio" name="funRadio" value="woods">the ski slopes.
                 </label>
               </div>
 
@@ -144,32 +151,32 @@
               <p>Your guilty pleasure:</p>
               <div class="radio">
                 <label>
-                  <input type="radio" name="pleasureRadio" id="drinking">Drinking</input>
+                  <input type="radio" name="pleasureRadio" value="drinking">Drinking
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="pleasureRadio" id="chocolate">Chocolate</input>
+                  <input type="radio" name="pleasureRadio" value="chocolate">Chocolate
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="pleasureRadio" id="richFood">Rich Foods</input>
+                  <input type="radio" name="pleasureRadio" value="richFood">Rich Foods
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="pleasureRadio" id="gambling">Gambling</input>
+                  <input type="radio" name="pleasureRadio" value="gambling">Gambling
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="pleasureRadio" id="other">Other</input>
+                  <input type="radio" name="pleasureRadio" value="other">Other
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="pleasureRadio" id="nothing">I admit nothing.</input>
+                  <input type="radio" name="pleasureRadio" value="nothing">I admit nothing.
                 </label>
               </div>
             </div>
@@ -179,7 +186,7 @@
         </form>
       </div>
       <!-- RESULTS -->
-      <div class="row" id="result">
+      <div class="row hide" id="result">
         <div class="col-sm-8">
           <h2>Your perfect vacation spot awaits you in ...</h2>
           <div class="row hide" id="patagonia">
@@ -204,7 +211,7 @@
 
           <div class="row hide" id="france">
             <div class="col-sm-offset-3 col-sm-6 resultOption">
-              <img src="img/france.jpg" class="img-responsive thumbnail" alt="france mountains">
+              <img src="img/france.jpg" class="img-responsive thumbnail" alt="french lavendar fields">
               <div class="page-header">
                 <h3>France</h3>
               </div>
@@ -214,7 +221,7 @@
 
           <div class="row hide" id="ireland">
             <div class="col-sm-offset-3 col-sm-6 resultOption">
-              <img src="img/ireland.jpg" class="img-responsive thumbnail" alt="ireland mountains">
+              <img src="img/ireland.jpg" class="img-responsive thumbnail" alt="irish ruins">
               <div class="page-header">
                 <h3>Ireland</h3>
               </div>
@@ -224,7 +231,7 @@
 
           <div class="row hide" id="macau">
             <div class="col-sm-offset-3 col-sm-6 resultOption">
-              <img src="img/macau.jpg" class="img-responsive thumbnail" alt="macau mountains">
+              <img src="img/macau.jpg" class="img-responsive thumbnail" alt="macau city">
               <div class="page-header">
                 <h3>Macau</h3>
               </div>
@@ -234,7 +241,7 @@
 
           <div class="row hide" id="saltlakecity">
             <div class="col-sm-offset-3 col-sm-6 resultOption">
-              <img src="img/saltlakecity.jpg" class="img-responsive thumbnail" alt="saltlakecity mountains">
+              <img src="img/saltlakecity.jpg" class="img-responsive thumbnail" alt="salt lake city">
               <div class="page-header">
                 <h3>Salt Lake City</h3>
               </div>
@@ -244,7 +251,7 @@
 
           <div class="row hide" id="switzerland">
             <div class="col-sm-offset-3 col-sm-6 resultOption">
-              <img src="img/switzerland.jpg" class="img-responsive thumbnail" alt="switzerland mountains">
+              <img src="img/switzerland.jpg" class="img-responsive thumbnail" alt="swiss village">
               <div class="page-header">
                 <h3>Switzerland</h3>
               </div>
