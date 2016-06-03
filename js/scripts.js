@@ -3,6 +3,7 @@
 var findVacation = function(gender, preference, taste, alcohol, fun, name, age, pleasure) {
   if (alcohol === "tea") {
     $("#saltlakecity").removeClass("hide");
+
   }
   else if (alcohol === "whiskey" && preference === "history") {
       $("#ireland").removeClass("hide");
@@ -55,6 +56,9 @@ $(document).ready(function(event) {
       $("#survey").addClass("hide");
       $("#result").removeClass("hide");
       findVacation(gender, preference, taste, alcohol, fun, name, age, pleasure);
+      $("button#resetButton").click(function(event) {
+        window.location.assign("index.html");
+      });
     }
 
     event.preventDefault();

@@ -68,3 +68,11 @@ p#choiceHeading {
 .resultOption h3 {
   text-align: center;
 }
+
+.moreButton {
+  text-align: center;
+}
+
+#resetButton {
+  margin-bottom: 0.2em;
+}
