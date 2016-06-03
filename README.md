@@ -10,7 +10,7 @@ _Website prompts user to answer a variety of survey questions. When user clicks 
 
 ## Setup/Installation Requirements
 
-* Click <a href="#">here</a> to view on GitHubPages
+* Click <a href="http://brianhgrant.github.io/perfect-vacation/index.html">here</a> to view on GitHubPages
 
 ## Known Bugs
 
