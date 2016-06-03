@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Bree+Serif|Play:400,700|Alegreya:400,700,900' rel='stylesheet' type='text/css'>
     <script src="js/jquery-1.12.4.js" type="text/javascript"></script>
     <script src="js/scripts.js" type="text/javascript"></script>
     <title>Vacation of your dreams</title>
@@ -11,7 +12,7 @@
     <div class="container">
       <!-- HEADER -->
       <div class="row">
-        <div class="col-sm-offset-3 col-sm-6 jumbotron">
+        <div class="col-sm-offset-2 col-sm-8 jumbotron" id="header">
           <h1>Find your perfect vaction spot!</h1>
         </div>
       </div>
@@ -20,8 +21,8 @@
         <form id="mainForm">
           <div class="row">
             <!-- GENDER -->
-            <div class="col-sm-2">
-              <p>Gender</p>
+            <div class="col-sm-offset-2 col-sm-2 formInput">
+              <p id="choiceHeading">Gender</p>
               <select class="form-control" id="genderOption">
                 <option>Male</option>
                 <option>Female</option>
@@ -29,8 +30,8 @@
               </select>
             </div>
             <!-- Preference -->
-            <div class="col-sm-2">
-              <p>What do you enjoy most:</p>
+            <div class="col-sm-2 formInput">
+              <p id="choiceHeading">What do you enjoy most:</p>
               <div class="radio">
                 <label>
                   <input type="radio" name="preferRadio" value="adventure">
@@ -57,8 +58,8 @@
               </div>
             </div>
             <!-- TASTE -->
-            <div class="col-sm-2">
-              <p>You have a taste for:</p>
+            <div class="col-sm-2 formInput">
+              <p id="choiceHeading">You have a taste for:</p>
               <div class="radio">
                 <label>
                   <input type="radio" name="tasteRadio" value="sweet">
@@ -79,8 +80,8 @@
               </div>
             </div>
             <!-- ALCOHOL -->
-            <div class="col-sm-2">
-              <p>What's your favorite alcohol?</p>
+            <div class="col-sm-2 formInput">
+              <p id="choiceHeading">What's your favorite alcohol?</p>
               <div class="radio">
                 <label>
                   <input type="radio" name="alcoholRadio" value="whiskey">Whiskey
@@ -110,8 +111,8 @@
           </div>
           <div class="row">
             <!-- FUN -->
-            <div class="col-sm-2">
-              <p>For fun I like to go to...</p>
+            <div class="col-sm-offset-2 col-sm-2 formInput">
+              <p id="choiceHeading">For fun I like to go to...</p>
               <div class="radio">
                 <label>
                   <input type="radio" name="funRadio" value="woods">the woods.
@@ -132,23 +133,24 @@
                   <input type="radio" name="funRadio" value="skiSlopes">the ski slopes.
                 </label>
               </div>
-
             </div>
-            <div class="col-sm-2 has-warning">
-              <div class="form-group">
+            <!-- NAME -->
+            <div class="col-sm-2 formInput">
+              <div class="form-group" id="nameInput">
                 <label for="nameField">Your name:</label>
                 <input type="text" class="form-control" id="nameField" placeholder="Your name">
               </div>
             </div>
-
-            <div class="col-sm-2">
-              <div class="form-group has-warning">
+            <!-- AGE -->
+            <div class="col-sm-2 formInput">
+              <div class="form-group">
                 <label for="ageField">Your age:</label>
                 <input type="text" class="form-control" id="ageField" placeholder="0 to decline">
               </div>
             </div>
-            <div class="col-sm-2">
-              <p>Your guilty pleasure:</p>
+            <!-- PLEASURE -->
+            <div class="col-sm-2 formInput">
+              <p id="choiceHeading">Your guilty pleasure:</p>
               <div class="radio">
                 <label>
                   <input type="radio" name="pleasureRadio" value="drinking">Drinking
@@ -181,13 +183,17 @@
               </div>
             </div>
           </div>
-
-          <button type="submit" class="btn btn-primary btn-lg" id="submitForm">Take me away!</button>
+          <div class ="row">
+            <div class="col-sm-offset-5 col-sm-2">
+              <button type="submit" class="btn btn-primary btn-lg" id="submitForm">Take me away!</button>
+              <p class= "hide" id="errorMsg">Something wrong!</p>
+            </div>
+          </div>
         </form>
       </div>
       <!-- RESULTS -->
       <div class="row hide" id="result">
-        <div class="col-sm-8">
+        <div class="col-sm-offset-2 col-sm-8">
           <h2>Your perfect vacation spot awaits you in ...</h2>
           <div class="row hide" id="patagonia">
             <div class="col-sm-offset-3 col-sm-6 resultOption">
@@ -270,7 +276,7 @@
           </div>
           <div class="row hide" id="easterIslands">
             <div class="col-sm-offset-3 col-sm-6 resultOption">
-              <img src="img/easterislands.jpg" class="img-responsive thumbnail" alt="easter islands">
+              <img src="img/easterislands.jpeg" class="img-responsive thumbnail" alt="easter islands">
               <div class="page-header">
                 <h3>Easter Islands</h3>
               </div>

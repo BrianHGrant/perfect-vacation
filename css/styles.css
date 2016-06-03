@@ -1,8 +1,70 @@
+body {
+  margin: 1em;
+  /*padding: 1em;*/
+  background-color: #FFC48A;
+}
+p {
+  font-family: 'Alegreya', serif;
+}
+
+#header {
+  margin-top: 1em;
+  background-color: #7182BF;
+  font-family: 'Play', sans-serif;
+  border-style: inset;
+  text-align: center;
+  color: #FFC48A;
+}
+
+.formInput {
+  border-style: ridge;
+  border-radius: 2%;
+  background-color: #D98635;
+  height: 200px;
+  width: 180px;
+}
+p#choiceHeading {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+#submitForm {
+  margin: 0.2em
+}
+
+#errorMsg {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
 
 .hide {
   display: none;
 }
 
+#result {
+  border-style: inset;
+  background-color: #44B461;
+  border-radius: 2%;
+}
+
+#result h2 {
+  text-align: center;
+  font-family: 'Play', sans-serif;
+}
+
 .resultOption {
-  border: 2pt solid black;
+  border-style: inset;
+  background-color: white;
+  margin-bottom: 0.4em;
+  border-radius: 2%;
+}
+
+.resultOption img {
+  margin-top: .4em;
+}
+
+.resultOption h3 {
+  text-align: center;
 }

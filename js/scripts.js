@@ -1,5 +1,14 @@
 // Business logic
 
+// var validateInput = function(inputToValidate) {
+//   if (inputToValidate === null) {
+//     return false;
+//   }
+//   else {
+//     return true;
+//   }
+// }
+
 var findVacation = function(gender, preference, taste, alcohol, fun, name, age, pleasure) {
   if (alcohol === "tea") {
     $("#saltlakecity").removeClass("hide");
@@ -47,10 +56,15 @@ $(document).ready(function(event) {
     var age = parseInt($("input#ageField").val());
     var pleasure = $("input:radio[name=pleasureRadio]:checked").val();
 
-    $("#survey").addClass("hide");
-    $("#result").removeClass("hide");
-
-    findVacation(gender, preference, taste, alcohol, fun, name, age, pleasure);
+    if (!gender || !preference || !taste || !alcohol || !fun || !name || !age || !pleasure) {
+      $("button#submitForm").removeClass("btn-info").addClass("btn-danger");
+      $("#errorMsg").removeClass("hide");
+    }
+    else {
+      $("#survey").addClass("hide");
+      $("#result").removeClass("hide");
+      findVacation(gender, preference, taste, alcohol, fun, name, age, pleasure);
+    }
 
     event.preventDefault();
   });
