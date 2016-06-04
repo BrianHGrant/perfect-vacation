@@ -21,7 +21,7 @@
         <form id="mainForm">
           <div class="row">
             <!-- GENDER -->
-            <div class="col-sm-offset-2 col-sm-2 formInput">
+            <div class="col-sm-offset-2 col-sm-8 formInput">
               <p id="choiceHeading">Gender</p>
               <select class="form-control" id="genderOption">
                 <option>Male</option>
@@ -30,7 +30,7 @@
               </select>
             </div>
             <!-- Preference -->
-            <div class="col-sm-2 formInput">
+            <div class="col-sm-2 formInput hide">
               <p id="choiceHeading">What do you enjoy most:</p>
               <div class="radio">
                 <label>
@@ -58,7 +58,7 @@
               </div>
             </div>
             <!-- TASTE -->
-            <div class="col-sm-2 formInput">
+            <div class="col-sm-2 formInput hide">
               <p id="choiceHeading">You have a taste for:</p>
               <div class="radio">
                 <label>
@@ -80,7 +80,7 @@
               </div>
             </div>
             <!-- ALCOHOL -->
-            <div class="col-sm-2 formInput">
+            <div class="col-sm-2 formInput hide">
               <p id="choiceHeading">What's your favorite alcohol?</p>
               <div class="radio">
                 <label>
@@ -111,7 +111,7 @@
           </div>
           <div class="row">
             <!-- FUN -->
-            <div class="col-sm-offset-2 col-sm-2 formInput">
+            <div class="col-sm-offset-2 col-sm-2 formInput hide">
               <p id="choiceHeading">For fun I like to go to...</p>
               <div class="radio">
                 <label>
@@ -135,21 +135,21 @@
               </div>
             </div>
             <!-- NAME -->
-            <div class="col-sm-2 formInput">
+            <div class="col-sm-2 formInput hide">
               <div class="form-group" id="nameInput">
                 <label for="nameField">Your name:</label>
                 <input type="text" class="form-control" id="nameField" placeholder="Your name">
               </div>
             </div>
             <!-- AGE -->
-            <div class="col-sm-2 formInput">
+            <div class="col-sm-2 formInput hide">
               <div class="form-group">
                 <label for="ageField">Your age:</label>
                 <input type="text" class="form-control" id="ageField" placeholder="0 to decline">
               </div>
             </div>
             <!-- PLEASURE -->
-            <div class="col-sm-2 formInput">
+            <div class="col-sm-2 formInput hide">
               <p id="choiceHeading">Your guilty pleasure:</p>
               <div class="radio">
                 <label>
@@ -184,7 +184,7 @@
             </div>
           </div>
           <div class ="row">
-            <div class="col-sm-offset-5 col-sm-2">
+            <div class="col-sm-offset-5 col-sm-2 hide">
               <button type="submit" class="btn btn-primary btn-lg" id="submitForm">Take me away!</button>
               <p class= "hide" id="errorMsg">Something wrong!</p>
             </div>

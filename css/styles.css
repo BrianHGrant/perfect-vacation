@@ -1,7 +1,8 @@
 body {
   margin: 1em;
   /*padding: 1em;*/
-  background-color: #FFC48A;
+  background-color: #5786B3;
+
 }
 p {
   font-family: 'Alegreya', serif;
@@ -9,7 +10,8 @@ p {
 
 #header {
   margin-top: 1em;
-  background-color: #7182BF;
+  background-image: url("../img/headerPalms.jpeg");
+  background-size: 100% 100%;
   font-family: 'Play', sans-serif;
   border-style: inset;
   text-align: center;
@@ -19,7 +21,7 @@ p {
 .formInput {
   border-style: ridge;
   border-radius: 2%;
-  background-color: #D98635;
+  background-color: #E16022;
   height: 200px;
   width: 180px;
 }
