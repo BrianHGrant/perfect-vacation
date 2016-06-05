@@ -1,8 +1,13 @@
-body {
-  margin: 1em;
-  /*padding: 1em;*/
-  background-color: #5786B3;
+html {
+    height: 100%;
+}
 
+body {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(red, yellow, green); /* Standard syntax */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 p {
   font-family: 'Alegreya', serif;
@@ -12,23 +17,50 @@ p {
   margin-top: 1em;
   background-image: url("../img/headerPalms.jpeg");
   background-size: 100% 100%;
-  font-family: 'Play', sans-serif;
+  font-family: 'Alfa Slab One', cursive;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   border-style: inset;
   text-align: center;
-  color: #FFC48A;
+  color: #FFEF6A;
+}
+
+#header h1 {
+  font-size: 3.50em;
 }
 
 .formInput {
+  float: none;
+  margin: 0 auto;
   border-style: ridge;
   border-radius: 2%;
-  background-color: #E16022;
-  height: 200px;
-  width: 180px;
+  background-color: #F13021;
+  height: 300px;
+  max-width: 450px;
 }
+
+.formInput label {
+  font-weight: bold;
+}
+
 p#choiceHeading {
   font-weight: bold;
   text-align: center;
-  font-size: 1.1em;
+  font-size: 1.6em;
+  color: #FFEF6A;
+}
+
+.nextButton {
+  margin: 2em 0 2em 0;
+}
+
+.progressFrame {
+  float: none;
+  margin: 0.2em auto;
+  padding: 1em 1em 0 1em;
+  border-style: ridge;
+  border-radius: 2%;
+  background-color: #F13021;
+  max-width: 450px;
 }
 
 #submitForm {
@@ -53,7 +85,8 @@ p#choiceHeading {
 
 #result h2 {
   text-align: center;
-  font-family: 'Play', sans-serif;
+  font-family: 'Alfa Slab One', cursive;
+  /*color: #F03F3A;*/
 }
 
 .resultOption {
@@ -68,10 +101,6 @@ p#choiceHeading {
 }
 
 .resultOption h3 {
-  text-align: center;
-}
-
-.moreButton {
   text-align: center;
 }
 
