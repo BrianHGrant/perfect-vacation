@@ -86,7 +86,8 @@ p#choiceHeading {
 #result h2 {
   text-align: center;
   font-family: 'Alfa Slab One', cursive;
-  /*color: #F03F3A;*/
+  /*color: #F13021;*/
+  text-shadow: -1px 0 #FFEF6A, 0 1px #FFEF6A, 1px 0 #FFEF6A, 0 -1px #FFEF6A;
 }
 
 .resultOption {
@@ -101,7 +102,12 @@ p#choiceHeading {
 }
 
 .resultOption h3 {
+  color: #1A68E4;
   text-align: center;
+}
+
+.resultOption p {
+  font-size: 1.2em;
 }
 
 #resetButton {

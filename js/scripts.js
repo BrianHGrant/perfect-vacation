@@ -151,10 +151,7 @@ $(document).ready(function(event) {
   $("button#submitForm").click(function(event) {
     var pleasure = $("input:radio[name=pleasureRadio]:checked").val();
 
-    if (!pleasure) {
-      $("#eighthButton").removeClass("btn-success").addClass("btn-danger");
-    }
-    else if (!gender || !preference || !taste || !alcohol || !fun || !name || !age || !pleasure) {
+  if (!gender || !preference || !taste || !alcohol || !fun || !name || !age || !pleasure) {
       $("button#submitForm").removeClass("btn-info").addClass("btn-danger");
       $("#errorMsg").removeClass("hide");
     }
