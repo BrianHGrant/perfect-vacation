@@ -17,24 +17,29 @@ var findVacation = function(gender, preference, taste, alcohol, fun, name, age, 
         $("#france").removeClass("hide");
       }
       else {
-        if (preference === "adventure" && fun === "woods") {
-          $("#patagonia").removeClass("hide");
-        }
-        else if (preference === "adventure" && taste === "spicy") {
-          $('#mexico').removeClass("hide");
+        if (age >= 50) {
+          $('#cruise').removeClass("hide");
         }
         else {
-          if (pleasure === "chocolate" || fun === "skiSlopes") {
-            $("#switzerland").removeClass("hide");
+          if (preference === "adventure" && fun === "woods") {
+            $("#patagonia").removeClass("hide");
           }
-          else if (alcohol === "rum" || fun === "beach") {
-            $("#bahamas").removeClass("hide");
-          }
-          else if (pleasure === "gambling" || fun === "urban") {
-            $("#macau").removeClass("hide");
+          else if (preference === "adventure" && taste === "spicy") {
+            $('#mexico').removeClass("hide");
           }
           else {
-            $("#easterIslands").removeClass("hide");
+            if (pleasure === "chocolate" || fun === "skiSlopes") {
+              $("#switzerland").removeClass("hide");
+            }
+            else if (alcohol === "rum" || fun === "beach") {
+              $("#bahamas").removeClass("hide");
+            }
+            else if (pleasure === "gambling" || fun === "urban") {
+              $("#macau").removeClass("hide");
+            }
+            else {
+              $("#easterIslands").removeClass("hide");
+            }
           }
         }
       }
@@ -46,109 +51,31 @@ var findVacation = function(gender, preference, taste, alcohol, fun, name, age, 
 // User Interface
 
 $(document).ready(function(event) {
-
+  var p = 0;
   // GENDER
-  $("#firstButton").click(function(event) {
+  $("#nextButton").on("click", function(event) {
+    if (p<8) {
+      p++;
       gender = $("#genderOption").val();
-      $("#id0").addClass("hide");
-      $("#id1").removeClass("hide");
-      $("#firstPosition").addClass("hide");
-      $("#secondPosition").removeClass("hide");
+      $("#id" + p).addClass("hide");
+      $("#id" +(p+1)).removeClass("hide");
+      $("#position" + p).addClass("hide");
+      $("#position" + (p+1)).removeClass("hide");
       event.preventDefault();
+    }
+    if (p===7) {
+      $("#formButton").addClass("hide");
+      $("#submitButton").removeClass("hide");
+    }
   });
-
-  // PREFERENCE
-  $("#secondButton").click(function(event) {
-    preference = $("input:radio[name=preferRadio]:checked").val();
-    if (!preference) {
-      $("#secondButton").removeClass("btn-success").addClass("btn-danger");
-    }
-    else {
-      $("#id1").addClass("hide");
-      $("#id2").removeClass("hide");
-      $("#secondPosition").addClass("hide");
-      $("#thirdPosition").removeClass("hide");
-    }
-    event.preventDefault();
-  });
-
-  // TASTE
-  $("#thirdButton").click(function(event) {
-    taste = $("input:radio[name=tasteRadio]:checked").val();
-    if (!taste) {
-      $("#thirdButton").removeClass("btn-success").addClass("btn-danger");
-    }
-    else {
-      $("#id2").addClass("hide");
-      $("#id3").removeClass("hide");
-      $("#thirdPosition").addClass("hide");
-      $("#fourthPosition").removeClass("hide");
-    }
-    event.preventDefault();
-  });
-
-  // ALCOHOL
-  $("#fourthButton").click(function(event) {
-    alcohol = $("input:radio[name=alcoholRadio]:checked").val();
-    if (!alcohol) {
-      $("#fourthButton").removeClass("btn-success").addClass("btn-danger");
-    }
-    else {
-      $("#id3").addClass("hide");
-      $("#id4").removeClass("hide");
-      $("#fourthPosition").addClass("hide");
-      $("#fifthPosition").removeClass("hide");
-    }
-    event.preventDefault();
-  });
-
-  //FUN
-  $("#fifthButton").click(function(event) {
-    fun = $("input:radio[name=funRadio]:checked").val();
-    if (!fun) {
-      $("#fifthButton").removeClass("btn-success").addClass("btn-danger");
-    }
-    else {
-      $("#id4").addClass("hide");
-      $("#id5").removeClass("hide");
-      $("#fifthPosition").addClass("hide");
-      $("#sixthPosition").removeClass("hide");
-    }
-    event.preventDefault();
-  });
-
-  // NAME
-  $("#sixthButton").click(function(event) {
-    name = $("#nameField").val();
-    if (!name) {
-      $("#sixthButton").removeClass("btn-success").addClass("btn-danger");
-    }
-    else {
-      $("#id5").addClass("hide");
-      $("#id6").removeClass("hide");
-      $("#sixthPosition").addClass("hide");
-      $("#seventhPosition").removeClass("hide");
-    }
-    event.preventDefault();
-  });
-
-  // AGE
-  $("#seventhButton").click(function(event) {
-    age = parseInt($("input#ageField").val());
-    if (!age) {
-      $("#seventhButton").removeClass("btn-success").addClass("btn-danger");
-    }
-    else if (age>=0){
-      $("#id6").addClass("hide");
-      $("#id7").removeClass("hide");
-      $("#seventhPosition").addClass("hide");
-      $("#eighthPosition").removeClass("hide");
-    }
-    event.preventDefault();
-  });
-
-  // PLEASURE
-  $("button#submitForm").click(function(event) {
+  $("#submitForm").click(function(event) {
+    var gender = $("#genderOption").val();
+    var preference = $("input:radio[name=preferRadio]:checked").val();
+    var taste = $("input:radio[name=tasteRadio]:checked").val();
+    var alcohol = $("input:radio[name=alcoholRadio]:checked").val();
+    var fun = $("input:radio[name=funRadio]:checked").val();
+    var name = $("#nameField").val();
+    var age = parseInt($("input#ageField").val());
     var pleasure = $("input:radio[name=pleasureRadio]:checked").val();
 
   if (!gender || !preference || !taste || !alcohol || !fun || !name || !age || !pleasure) {

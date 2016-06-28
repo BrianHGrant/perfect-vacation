@@ -3,7 +3,7 @@
   <head>
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Alfa+Slab+One|Play:400,700|Alegreya:400,700,900' rel='stylesheet' type='text/css'>
+    <!-- <link href='https://fonts.googleapis.com/css?family=Alfa+Slab+One|Play:400,700|Alegreya:400,700,900' rel='stylesheet' type='text/css'> -->
     <script src="js/jquery-1.12.4.js" type="text/javascript"></script>
     <script src="js/scripts.js" type="text/javascript"></script>
     <title>Vacation of your dreams</title>
@@ -19,26 +19,17 @@
       <!-- FORM -->
       <div class="row" id="survey">
         <form id="mainForm">
-          <!-- <div class="row"> -->
-            <!-- GENDER -->
-            <div class="row" id="id0">
-              <div class="col-xs-offset-3 col-xs-6 formInput">
+          <div class="row">
+            <div class="col-xs-offset-3 col-xs-6 formInput">
+              <div id="id1">
                 <p id="choiceHeading">Gender</p>
                 <select class="form-control" id="genderOption">
                   <option>Male</option>
                   <option>Female</option>
                   <option value="other">Not listed</option>
                 </select>
-                <div class ="row nextButton">
-                  <div class="col-xs-offset-5">
-                    <button type="click" class="btn btn-success" id="firstButton">Next</button>
-                  </div>
-                </div>
               </div>
-            </div>
-            <!-- Preference -->
-            <div class="row hide" id="id1">
-              <div class="col-sm-offset-3 col-sm-6 formInput">
+              <div class="hide" id="id2">
                 <p id="choiceHeading">What do you enjoy most:</p>
                 <div class="radio">
                   <label>
@@ -64,16 +55,8 @@
                     Romance
                   </label>
                 </div>
-                <div class ="row nextButton">
-                  <div class="col-xs-offset-5">
-                    <button type="click" class="btn btn-success" id="secondButton">Next</button>
-                  </div>
-                </div>
               </div>
-            </div>
-            <!-- TASTE -->
-            <div class="row hide" id="id2">
-              <div class="col-sm-offset-3 col-sm-6 formInput">
+              <div class="hide" id="id3">
                 <p id="choiceHeading">You have a taste for:</p>
                 <div class="radio">
                   <label>
@@ -93,16 +76,8 @@
                     Spicy
                   </label>
                 </div>
-                <div class ="row nextButton">
-                  <div class="col-xs-offset-5">
-                    <button type="click" class="btn btn-success" id="thirdButton">Next</button>
-                  </div>
-                </div>
               </div>
-            </div>
-            <!-- ALCOHOL -->
-            <div class="row hide" id="id3">
-              <div class="col-sm-offset-3 col-sm-6 formInput">
+              <div class="hide" id="id4">
                 <p id="choiceHeading">What's your favorite alcohol?</p>
                 <div class="radio">
                   <label>
@@ -129,16 +104,8 @@
                     <input type="radio" name="alcoholRadio" value="tea">I'm a tea-tottler
                   </label>
                 </div>
-                <div class ="row nextButton">
-                  <div class="col-xs-offset-5">
-                    <button type="click" class="btn btn-success" id="fourthButton">Next</button>
-                  </div>
-                </div>
               </div>
-            </div>
-            <!-- FUN -->
-            <div class="row hide" id="id4">
-              <div class="col-sm-offset-3 col-sm-6 formInput">
+              <div class="hide" id="id5">
                 <p id="choiceHeading">For fun I like to go to...</p>
                 <div class="radio">
                   <label>
@@ -165,44 +132,20 @@
                     <input type="radio" name="funRadio" value="music">to a music festival.
                   </label>
                 </div>
-                <div class ="row nextButton">
-                  <div class="col-xs-offset-5">
-                    <button type="click" class="btn btn-success" id="fifthButton">Next</button>
-                  </div>
-                </div>
               </div>
-            </div>
-            <!-- NAME -->
-            <div class="row hide" id="id5">
-              <div class="col-sm-offset-3 col-sm-6 formInput">
+              <div class="hide" id="id6">
                 <div class="form-group" id="nameInput">
                   <label for="nameField">Your name:</label>
                   <input type="text" class="form-control" id="nameField" placeholder="Your name">
                 </div>
-                <div class ="row nextButton">
-                  <div class="col-xs-offset-5">
-                    <button type="click" class="btn btn-success" id="sixthButton">Next</button>
-                  </div>
-                </div>
               </div>
-            </div>
-            <!-- AGE -->
-            <div class="row hide" id="id6">
-              <div class="col-sm-offset-3 col-sm-6 formInput">
+              <div class="hide" id="id7">
                 <div class="form-group">
                   <label for="ageField">Your age:</label>
-                  <input type="text" class="form-control" id="ageField" placeholder="0 to decline">
-                </div>
-                <div class ="row nextButton">
-                  <div class="col-xs-offset-5">
-                    <button type="click" class="btn btn-success" id="seventhButton">Next</button>
-                  </div>
+                  <input type="text" class="form-control" id="ageField" placeholder="I won't tell.">
                 </div>
               </div>
-            </div>
-            <!-- PLEASURE -->
-            <div class="row hide" id="id7">
-              <div class="col-sm-offset-3 col-sm-6 formInput">
+              <div class="hide" id="id8">
                 <p id="choiceHeading">Your guilty pleasure:</p>
                 <div class="radio">
                   <label>
@@ -234,11 +177,15 @@
                     <input type="radio" name="pleasureRadio" value="nothing">I admit nothing.
                   </label>
                 </div>
-                <div class ="row nextButton">
-                  <div class="col-xs-offset-5">
-                    <button type="submit" class="btn btn-primary btn-lg" id="submitForm">Take me away!</button>
-                    <p class= "hide" id="errorMsg">Invalid Entry!</p>
-                  </div>
+              </div>
+              <div class ="row changeButton" id="formButton">
+                <div class="col-xs-offset-5">
+                  <button type="click" class="btn btn-success" id="nextButton">Next</button>
+                </div>
+              </div>
+              <div class ="row hide changeButton" id="submitButton">
+                <div class="col-xs-offset-5">
+                  <button type="click" class="btn btn-primary" id="submitForm">Take me away!!!</button>
                 </div>
               </div>
             </div>
@@ -247,7 +194,7 @@
       </div>
       <!-- PROGRESSBAR -->
       <div id="progressSpace">
-        <div class="row" id="firstPosition">
+        <div class="row" id="position1">
           <div class="col-offset-4 col-4 progressFrame">
             <div class="progress">
               <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
@@ -256,7 +203,7 @@
             </div>
           </div>
         </div>
-        <div class="row hide" id="secondPosition">
+        <div class="row hide" id="position2">
           <div class="col-offset-4 col-4 progressFrame">
             <div class="progress">
               <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%">
@@ -265,7 +212,7 @@
             </div>
           </div>
         </div>
-        <div class="row hide" id="thirdPosition">
+        <div class="row hide" id="position3">
           <div class="col-offset-4 col-4 progressFrame">
             <div class="progress">
               <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%">
@@ -274,7 +221,7 @@
             </div>
           </div>
         </div>
-        <div class="row hide" id="fourthPosition">
+        <div class="row hide" id="position4">
           <div class="col-offset-4 col-4 progressFrame">
             <div class="progress">
               <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
@@ -283,7 +230,7 @@
             </div>
           </div>
         </div>
-        <div class="row hide" id="fifthPosition">
+        <div class="row hide" id="position5">
           <div class="col-offset-4 col-4 progressFrame">
             <div class="progress">
               <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
@@ -292,7 +239,7 @@
             </div>
           </div>
         </div>
-        <div class="row hide" id="sixthPosition">
+        <div class="row hide" id="position6">
           <div class="col-offset-4 col-4 progressFrame">
             <div class="progress">
               <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%">
@@ -301,7 +248,7 @@
             </div>
           </div>
         </div>
-        <div class="row hide" id="seventhPosition">
+        <div class="row hide" id="position7">
           <div class="col-offset-4 col-4 progressFrame">
             <div class="progress">
               <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
@@ -310,7 +257,7 @@
             </div>
           </div>
         </div>
-        <div class="row hide" id="eighthPosition">
+        <div class="row hide" id="position8">
           <div class="col-offset-4 col-4 progressFrame">
             <div class="progress">
               <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
@@ -357,6 +304,18 @@
               </div>
               <p>
                 You fancy yourself a bit of an Indiana Jones, don't you? Relive your fantasies while visiting some of the many Mayan ruins scattered through this southern Mexico Peninsula.  You're not here to party in Cancun but travel through the jungle, maybe come face to face with a Jaguar.
+              </p>
+            </div>
+          </div>
+          <!-- CRUISE -->
+          <div class="row hide" id="cruise">
+            <div class="col-sm-offset-2 col-sm-8 resultOption">
+              <img src="img/cruise.jpg" class="img-responsive thumbnail" alt="cruise ship">
+              <div class="page-header">
+                <h3>a Cruise Ship</h3>
+              </div>
+              <p>
+                Now is your chance to live out your own episode of Love Boat. It's time to put your shuffle board and line dancing skills to the test. A week at sea will be the perfect thing for those aching bones. Don't forget to pack your Hawaiian shirt or the Ben Gay.
               </p>
             </div>
           </div>
@@ -425,7 +384,7 @@
             <div class="col-sm-offset-2 col-sm-8 resultOption">
               <img src="img/easterislands.jpeg" class="img-responsive thumbnail" alt="easter islands">
               <div class="page-header">
-                <h3>Easter Islands</h3>
+                <h3>the Easter Islands</h3>
               </div>
               <p>
                 You've done it all and still haven't been satisfied. Your Instagram looks like National Geographic. What's left but this remote archipelago? Think of all the crazy selfies one can take with the ancient statues.
