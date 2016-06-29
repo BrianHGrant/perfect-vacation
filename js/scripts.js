@@ -56,7 +56,6 @@ $(document).ready(function(event) {
   $("#nextButton").on("click", function(event) {
     if (p<8) {
       p++;
-      gender = $("#genderOption").val();
       $("#id" + p).addClass("hide");
       $("#id" +(p+1)).removeClass("hide");
       $("#position" + p).addClass("hide");
