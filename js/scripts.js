@@ -184,7 +184,7 @@ $(document).ready(function(event) {
         FB.ui({
           method: 'feed',
           name: 'Your Perfect Vacation awaits in ' +  $("#" + resultID + " h3").text(),
-          link: 'http://brianhgrant.github.io/perfect-vacation/',
+          // link: 'http://brianhgrant.github.io/perfect-vacation/',
           description: $("#" + resultID + " p").text(),
           caption: 'Perfect Vacation Finder',
           picture: 'http://brianhgrant.github.io/perfect-vacation/' + $("#" + resultID + " img").attr('src'),
