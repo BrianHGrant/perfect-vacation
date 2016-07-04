@@ -63,6 +63,10 @@ p#choiceHeading {
   max-width: 450px;
 }
 
+#progress-start {
+  color: green;
+}
+
 #submitForm {
   margin: 0.2em
 }

@@ -143,7 +143,7 @@ $(document).ready(function(event) {
 
   // GENDER
   $("#nextButton").on("click", function(event) {
-    if (p<8) {
+    if (p<9) {
       $("#id" + p).addClass("hide");
       $("#position" + p).addClass("hide");
       $("#id" +(p+1)).removeClass("hide");
@@ -151,7 +151,7 @@ $(document).ready(function(event) {
       p++;
       event.preventDefault();
     }
-    if (p===7) {
+    if (p===8) {
       $("#formButton").addClass("hide");
       $("#submitButton").removeClass("hide");
     }
