@@ -176,10 +176,6 @@ $(document).ready(function(event) {
     var age = parseInt($("input#ageField").val());
     var pleasure = $("input:radio[name=pleasureRadio]:checked").val();
 
-    if (!gender || !preference || !taste || !alcohol || !fun || !name || !age || !pleasure) {
-      $("button#submitForm").removeClass("btn-info").addClass("btn-danger");
-      $("#errorMsg").removeClass("hide");
-    }
     else {
       $("#nameDisplay").append(name);
       $("#progressSpace").addClass("hide");
