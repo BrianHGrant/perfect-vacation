@@ -187,7 +187,6 @@ $(document).ready(function(event) {
           link: 'http://brianhgrant.github.io/perfect-vacation/',
           description: $("#" + resultID + " p").text(),
           caption: 'Perfect Vacation Finder',
-          // picture: 'http://brianhgrant.github.io/perfect-vacation/img/bahamas.jpg',
           picture: 'http://brianhgrant.github.io/perfect-vacation/' + $("#" + resultID + " img").attr('src'),
           display: 'popup'
         }, function(response){});
