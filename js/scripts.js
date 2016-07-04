@@ -185,7 +185,7 @@ $(document).ready(function(event) {
           method: 'feed',
           name: 'Your Perfect Vacation awaits in' + resultID,
           link: 'http://brianhgrant.github.io/perfect-vacation/',
-          description: $("#" + resultID + " p").text();,
+          description: $("#" + resultID + " p").text(),
           caption: 'Perfect Vacation Finder',
           picture: 'http://brianhgrant.github.io/perfect-vacation/img/bahamas.jpg',
           display: 'popup'
