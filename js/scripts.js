@@ -138,6 +138,7 @@ var findVacation = function(gender, preference, taste, alcohol, fun, name, age, 
 // User Interface
 
 $(document).ready(function(event) {
+
   var p = 0;
 
   // GENDER
