@@ -7,21 +7,30 @@
     <script src="js/jquery-1.12.4.js" type="text/javascript"></script>
     <script src="js/scripts.js" type="text/javascript"></script>
     <title>Vacation of your dreams</title>
-    <meta property="og:url"           content="http://brianhgrant.github.io/perfect-vacation/" />
-    <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="Perfect Vacation Finder" />
-    <meta property="og:description"   content="Your description" />
-    <meta property="og:image"         content="http://brianhgrant.github.io/perfect-vacation/img/ireland.jpg" />
   </head>
   <body>
-    <div id="fb-root"></div>
-      <script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=1755542908064168";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1755542908064168',
+          xfbml      : true,
+          version    : 'v2.6'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+
+       FB.ui({
+         method: 'feed',
+         link: 'https://developers.facebook.com/docs/',
+         caption: 'An example caption',
+       }, function(response){});
     </script>
     <div class="container">
       <!-- HEADER -->
@@ -307,8 +316,6 @@
               <p>
                 Tired of visiting tiki bars and Chinese restaruants for your rum cocktails? The beach bum in you is bursting to get out and sink your feet into the sand. Book a trip to this island paradise and enjoy high times in the tropics.  Throw on some Grateful Dead and lay back and sip a Mai Tai as you watch the sun roll by.
               </p>
-              <div class="fb-share-button" data-href="http://brianhgrant.github.io/perfect-vacation/"       data-layout="button_count">
-              </div>
             </div>
           </div>
           <!-- MEXICO -->
@@ -393,8 +400,6 @@
               <p>
                 You've got some cash to hide but too worried about the state of affairs in the offshore world? Switzerland is your tried and true option. Hit the slopes while you wait for the paperwork to clear. Rest easy, you can now rent your favorite Chalet using BitCoin. Go into town and buy some fine chocolates, enjoy them by the fire. You've had a busy day.
               </p>
-              <div class="fb-share-button" data-href="http://brianhgrant.github.io/perfect-vacation/"       data-layout="button_count">
-              </div>
             </div>
           </div>
           <!-- EASTER ISLANDS -->
