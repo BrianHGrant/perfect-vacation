@@ -187,7 +187,7 @@ $(document).ready(function(event) {
           link: window.location.href,
           description: 'Tired of visiting tiki bars and Chinese restaruants for your rum cocktails? The beach bum in you is bursting to get out and sink your feet into the sand. Book a trip to this island paradise and enjoy high times in the tropics.  Throw on some Grateful Dead and lay back and sip a Mai Tai as you watch the sun roll by.',
           caption: 'Relaxation awaits you!',
-          picture: './img/patagonia.jpg',
+          picture: 'http://brianhgrant.github.io/perfect-vacation/img/bahamas.jpg',
           display: 'popup'
         }, function(response){});
       })
