@@ -183,9 +183,12 @@ $(document).ready(function(event) {
       $("#bahamas-share").click(function(event) {
         FB.ui({
           method: 'feed',
-          // link: 'http://brianhgrant.github.io/perfect-vacation/',
-          description: 'Tired of visiting tiki bars and Chinese restaruants for your rum cocktails? The beach bum in you is bursting to get out and sink your feet into the sand. Book a trip to this island paradise and enjoy high times in the tropics.  Throw on some Grateful Dead and lay back and sip a Mai Tai as you watch the sun roll by.',
-          // picture: 'img/bahamas.jpg',
+          name: 'The Chizza power',
+          link: window.location.href,
+          description: 'On July 9 KFC unveiled their CHIZZA, a pizza that uses chicken as crust, showing to that world the real meaning of IDGAF.',
+          caption: 'It has arrived to riddle all your veins with fat',
+          picture: 'http://res.cloudinary.com/www-claudiordgz-com/image/upload/v1436819787/19369967005_0dc811c9a0_muuode-compressor_bxvrjl.jpg',
+          display: 'popup'
         }, function(response){});
       })
     }
