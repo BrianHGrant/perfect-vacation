@@ -7,7 +7,9 @@
     <script src="js/jquery-1.12.4.js" type="text/javascript"></script>
     <script src="js/scripts.js" type="text/javascript"></script>
     <script>
-
+      var fbAppId = '1755542908064168';
+      var objectToLike = 'http://techcrunch.com/2013/02/06/facebook-launches-developers-live-video-channel-to-keep-its-developer-ecosystem-up-to-date/'
+      ;
       window.fbAsyncInit = function() {
         FB.init({
           appId      : '1755542908064168',
@@ -23,6 +25,29 @@
          js.src = "//connect.facebook.net/en_US/sdk.js";
          fjs.parentNode.insertBefore(js, fjs);
        }(document, 'script', 'facebook-jssdk'));
+
+       function postLike() {
+          FB.api(
+             'https://graph.facebook.com/me/og.likes',
+             'post',
+             { object: objectToLike,
+               privacy: {'value': 'SELF'} },
+             function(response) {
+               if (!response) {
+                 alert('Error occurred.');
+               } else if (response.error) {
+                 document.getElementById('result').innerHTML =
+                   'Error: ' + response.error.message;
+               } else {
+                 document.getElementById('result').innerHTML =
+                   '<a href=\"https://www.facebook.com/me/activity/' +
+                   response.id + '\">' +
+                   'Story created.  ID is ' +
+                   response.id + '</a>';
+               }
+             }
+          );
+        }
     </script>
     <title>Vacation of your dreams</title>
   </head>
@@ -432,7 +457,24 @@
               <button type="click" class="btn btn-primary" id="resetButton">Reset Form</button>
             </div>
           </div>
-          <button id="shareBtn">Share On Facebook</button>
+          <div>
+This example creates a story on Facebook using the
+<a href="https://developers.facebook.com/docs/reference/ogaction/og.likes">
+<code>og.likes</code></a> API.  That story will just say
+that you like an
+<a href="http://techcrunch.com/2013/02/06/facebook-launches-developers-live-video-channel-to-keep-its-developer-ecosystem-up-to-date/">
+article on TechCrunch</a>.  The story should only
+be visible to you.
+</div>
+
+<div>
+<input
+  type="button"
+  value="Create a story with an og.likes action"
+  onclick="postLike();">
+</div>
+
+<div id="result"></div>
         </div>
       </div>
     </div> <!--container-->
