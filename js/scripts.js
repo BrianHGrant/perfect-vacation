@@ -183,10 +183,10 @@ $(document).ready(function(event) {
       $("#bahamas-share").click(function(event) {
         FB.ui({
           method: 'feed',
-          name: 'The Bahamas',
+          name: 'Your Perfect Vacation awaits in the Bahamas',
           link: 'http://brianhgrant.github.io/perfect-vacation/',
           description: 'Tired of visiting tiki bars and Chinese restaruants for your rum cocktails? The beach bum in you is bursting to get out and sink your feet into the sand. Book a trip to this island paradise and enjoy high times in the tropics.  Throw on some Grateful Dead and lay back and sip a Mai Tai as you watch the sun roll by.',
-          caption: 'Relaxation awaits you!',
+          caption: 'Perfect Vacation Finder',
           picture: 'http://brianhgrant.github.io/perfect-vacation/img/bahamas.jpg',
           display: 'popup'
         }, function(response){});
