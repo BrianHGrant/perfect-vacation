@@ -180,18 +180,6 @@ $(document).ready(function(event) {
         window.location.assign("index.html");
       });
     }
-    $("#'shareBtn'").click(function(event) {
-      FB.ui({
-        display: 'popup',
-        method: 'share',
-        title: 'I got ' + variable_name + '! How about you?',
-        description: 'What kind of rock are you? Find out now!',
-    link: 'THIS IS A LINK TO YOUR QUIZ'S PAGE ON YOUR WEBSITE',
-    picture: 'THIS PICTURE WILL BE THE FACEBOOK SHARE IMAGE',
-    href: 'THIS IS YOUR WEBSITE'S HOME ADDRESS',
-
-    });
-
     event.preventDefault();
   });
 
