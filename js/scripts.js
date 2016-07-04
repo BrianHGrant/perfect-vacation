@@ -188,7 +188,7 @@ $(document).ready(function(event) {
           caption: 'Relaxation awaits you!',
           picture: 'http://brianhgrant.github.io/perfect-vacation/img/bahamas.jpg',
           display: 'popup'
-          link: window.location.href,
+          link: window.location.href
         }, function(response){});
       })
     }
