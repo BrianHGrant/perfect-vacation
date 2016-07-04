@@ -139,21 +139,31 @@ var findVacation = function(gender, preference, taste, alcohol, fun, name, age, 
 
 $(document).ready(function(event) {
 
-  var p = 0;
+  var p = 1;
 
   // GENDER
   $("#nextButton").on("click", function(event) {
     if (p<8) {
-      p++;
       $("#id" + p).addClass("hide");
-      $("#id" +(p+1)).removeClass("hide");
       $("#position" + p).addClass("hide");
+      $("#id" +(p+1)).removeClass("hide");
       $("#position" + (p+1)).removeClass("hide");
+      p++;
       event.preventDefault();
     }
     if (p===7) {
       $("#formButton").addClass("hide");
       $("#submitButton").removeClass("hide");
+    }
+  });
+  $("#backButton").on("click", function(event) {
+    if (p>1 && p<9) {
+      $("#id" + p).addClass("hide");
+      $("#position" + p).addClass("hide");
+      $("#id" +(p-1)).removeClass("hide");
+      $("#position" + (p-1)).removeClass("hide");
+      p--;
+      event.preventDefault();
     }
   });
   $("#submitForm").click(function(event) {
