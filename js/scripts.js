@@ -101,7 +101,7 @@ var findVacation = function(gender, preference, taste, alcohol, fun, name, age, 
   if ((fun === "music" && morals <=2)) {
     return "jamCruise";
   }
-  else if ((adventure >= 8) && (nature >= 3) && (nature < 5) && (relaxation <= 2) && (morals <= 2)) {
+  else if ((adventure >= 6) && (nature >= 3) && (nature < 5) && (relaxation <= 2) && (morals <= 2)) {
     return "patagonia";
   }
   else if ((relaxation >= 7) && (morals <= 2) && (nature <=3) && (culture >1) && (culture<=3) && (adventure < 4)) {
