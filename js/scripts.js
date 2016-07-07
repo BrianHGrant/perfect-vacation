@@ -202,7 +202,7 @@ $(document).ready(function(event) {
           description: $("#" + resultID + " p").text(),
           caption: 'Perfect Vacation Finder',
           picture: 'http://brianhgrant.github.io/perfect-vacation/' + $("#" + resultID + " img").attr('src'),
-          // display: 'wap'
+          display: 'popup'
         }, function(response){});
       })
     }
