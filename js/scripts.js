@@ -1,5 +1,23 @@
 // Business logic
 
+var fb_callout = function() {
+  FB.ui({
+    method: 'feed',
+    name: 'Your Perfect Vacation awaits in ' +  $("#" + resultID + " h3").text(),
+    link: 'http://brianhgrant.github.io/perfect-vacation/',
+    description: $("#" + resultID + " p").text(),
+    caption: 'Perfect Vacation Finder',
+    picture: 'http://brianhgrant.github.io/perfect-vacation/' + $("#" + resultID + " img").attr('src'),
+    // display: 'dialog'
+  }, function(response){
+    if (response && response.post_id) {
+      window.location.href = '';
+    } else {
+      alert('Post was not published.');
+    }
+  });
+}
+
 
 var findVacation = function(gender, preference, taste, alcohol, fun, name, age, pleasure) {
   var morals = 0;
@@ -204,7 +222,7 @@ $(document).ready(function(event) {
           picture: 'http://brianhgrant.github.io/perfect-vacation/' + $("#" + resultID + " img").attr('src'),
           display: 'dialog'
         }, function(response){});
-      })
+      });
     }
     event.preventDefault();
   });
