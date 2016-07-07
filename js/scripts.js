@@ -104,7 +104,7 @@ var findVacation = function(gender, preference, taste, alcohol, fun, name, age, 
   else if ((adventure >= 6) && (nature >= 3) && (nature < 5) && (relaxation <= 2) && (morals <= 2)) {
     return "patagonia";
   }
-  else if ((relaxation >= 7) && (morals <= 2) && (nature <=3) && (culture >1) && (culture<=3) && (adventure < 4)) {
+  else if (alcohol === "rum" && fun === "beach") {
     return "bahamas";
   }
   else if ((culture >=7) && (adventure >=3)) {
@@ -117,17 +117,17 @@ var findVacation = function(gender, preference, taste, alcohol, fun, name, age, 
     return "france";
   }
 
-  else if ((culture >= 3 && culture <= 7) && (pleasure === "chocolate" || fun === "skiSlopes")) {
+  else if ((culture >= 3 && culture <= 7) && (morals < 3) && (pleasure === "chocolate" || fun === "skiSlopes")) {
     return "switzerland";
   }
 
-  else if ((culture >= 4 && culture <= 7) && (nature >2)) {
+  else if ((culture >= 4 && culture <= 7) && (nature >2) && (alcohol === "whiskey" || alcohol === "beer")) {
     return "ireland";
   }
   else if ((culture >= 4) && (relaxation >= 3 && relaxation<= 6) && (adventure >=4)) {
     return "macau";
   }
-  else if (morals >= 3 && morals < 6) {
+  else if (morals >= 3 && relaxation <= 6) {
     return "saltlakecity";
   }
 
@@ -156,8 +156,12 @@ $(document).ready(function(event) {
       $("#submitButton").removeClass("hide");
     }
   });
-  $("#backButton").on("click", function(event) {
+  $("button.backButton").on("click", function(event) {
     if (p>1 && p<9) {
+      if (p===8) {
+        $("#formButton").removeClass("hide");
+        $("#submitButton").addClass("hide");
+      }
       $("#id" + p).addClass("hide");
       $("#position" + p).addClass("hide");
       $("#id" +(p-1)).removeClass("hide");

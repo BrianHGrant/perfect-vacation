@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
+    <meta name='viewport' content='width=device-width' />
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <!-- <link href='https://fonts.googleapis.com/css?family=Alfa+Slab+One|Play:400,700|Alegreya:400,700,900' rel='stylesheet' type='text/css'> -->
@@ -52,7 +53,7 @@
           <div class="row">
             <div class="col-xs-offset-3 col-xs-6 formInput">
               <div id="id1">
-                <p id="choiceHeading">Gender</p>
+                <p class="choiceHeading">Gender</p>
                 <select class="form-control" id="genderOption">
                   <option>Male</option>
                   <option>Female</option>
@@ -60,7 +61,7 @@
                 </select>
               </div>
               <div class="hide" id="id2">
-                <p id="choiceHeading">What do you enjoy most:</p>
+                <p class="choiceHeading">What do you enjoy most:</p>
                 <div class="radio">
                   <label>
                     <input type="radio" name="preferRadio" value="adventure">
@@ -87,7 +88,7 @@
                 </div>
               </div>
               <div class="hide" id="id3">
-                <p id="choiceHeading">You have a taste for:</p>
+                <p class="choiceHeading">You have a taste for:</p>
                 <div class="radio">
                   <label>
                     <input type="radio" name="tasteRadio" value="sweet">
@@ -108,7 +109,7 @@
                 </div>
               </div>
               <div class="hide" id="id4">
-                <p id="choiceHeading">What's your favorite alcohol?</p>
+                <p class="choiceHeading">What's your favorite alcohol?</p>
                 <div class="radio">
                   <label>
                     <input type="radio" name="alcoholRadio" value="whiskey">Whiskey
@@ -136,7 +137,7 @@
                 </div>
               </div>
               <div class="hide" id="id5">
-                <p id="choiceHeading">For fun I like to go to...</p>
+                <p class="choiceHeading">For fun I like to go to...</p>
                 <div class="radio">
                   <label>
                     <input type="radio" name="funRadio" value="woods">the woods.
@@ -176,7 +177,7 @@
                 </div>
               </div>
               <div class="hide" id="id8">
-                <p id="choiceHeading">Your guilty pleasure:</p>
+                <p class="choiceHeading">Your guilty pleasure:</p>
                 <div class="radio">
                   <label>
                     <input type="radio" name="pleasureRadio" value="drinking">Drinking
@@ -210,14 +211,14 @@
               </div>
               <div class ="row changeButton" id="formButton">
                 <div class="col-xs-offset-4">
-                  <button type="click" class="btn btn-success" id="nextButton">Next</button>
-                  <button type="click" class="btn btn-primary" id="backButton">Back</button>
+                  <button type="button" class="btn btn-success" id="nextButton">Next</button>
+                  <button type="button" class="btn btn-primary backButton">Back</button>
                 </div>
               </div>
               <div class ="row hide changeButton" id="submitButton">
                 <div class="col-xs-offset-4">
-                  <button type="click" class="btn btn-success" id="submitForm">Take me away!!!</button>
-                  <button type="click" class="btn btn-primary" id="backButton">Back</button>
+                  <button type="button" class="btn btn-success" id="submitForm">Take me away!!!</button>
+                  <button type="button" class="btn btn-primary backButton">Back</button>
                 </div>
               </div>
             </div>
@@ -443,13 +444,21 @@
 
           <!-- RESET BUTTON -->
           <div id="buttons">
-            <button type="click" class="btn btn-danger" id="resetButton">Reset Form</button>
+            <button type="button" class="btn btn-danger" id="resetButton">Reset Form</button>
             <button type="button" class="btn btn-primary" id="facebook-share">Share on Facebook!</button>
           </div>
         </div>
       </div>
       <div id="ad-space">
         <div class="fb-ad" data-placementid="1755542908064168_1755912414693884" data-format="300x250" data-testmode="false"></div>
+      </div>
+      <div id="footer">
+        <p>
+          <a href="http://jigsaw.w3.org/css-validator/check/referer">
+            <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!"/>
+          </a>
+        </p>
+
       </div>
     </div> <!--container-->
   </body>
