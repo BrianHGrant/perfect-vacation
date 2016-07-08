@@ -163,7 +163,7 @@ var findVacation = function(gender, preference, taste, alcohol, fun, name, age, 
   else if ((culture >= 4 && culture <= 7) && (nature >2) && (alcohol === "whiskey" || alcohol === "beer")) {
     return "ireland";
   }
-  else if ((culture >= 4) && (relaxation >= 3 && relaxation<= 6) && (adventure >=4)) {
+  else if ((fun === "gambling") && (relaxation >= 2 && relaxation<= 6) && (adventure >=4)) {
     return "macau";
   }
   else if (morals >= 3 && relaxation <= 6) {
