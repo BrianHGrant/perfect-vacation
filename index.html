@@ -27,42 +27,18 @@
       window.fbAsyncInit = function() {
         FB.init({
           appId      : '1755542908064168',
-          status     : true,
-          cookie     : true,
           xfbml      : true,
-          version    : 'v2.5'
+          version    : 'v2.6'
         });
-     };
-      (function(d, s, id) {
+      };
+
+      (function(d, s, id){
         var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
+        if (d.getElementById(id)) {return;}
         js = d.createElement(s); js.id = id;
         js.src = "//connect.facebook.net/en_US/sdk.js";
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
-
-      window.fbAsyncInit = function() {
-        FB.Event.subscribe(
-          'ad.loaded',
-          function(placementId) {
-            console.log('Audience Network ad loaded');
-          }
-        );
-        FB.Event.subscribe(
-          'ad.error',
-          function(errorCode, errorMessage, placementId) {
-            console.log('Audience Network error (' + errorCode + ') ' + errorMessage);
-          }
-        );
-      };
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk/xfbml.ad.js#xfbml=1&version=v2.5&appId=1755542908064168";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-
     </script>
     <div class="container">
       <!-- HEADER -->
@@ -479,6 +455,12 @@
       </div>
       <div class="pull-right" id="footer">
         <p>
+          <div
+            class="fb-like"
+            data-share="true"
+            data-width="450"
+            data-show-faces="true">
+          </div>
           <a href="http://jigsaw.w3.org/css-validator/check/referer">
             <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!"/>
           </a>
