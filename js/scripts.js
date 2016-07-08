@@ -170,15 +170,14 @@ var findVacation = function(gender, preference, taste, alcohol, fun, name, age, 
 
 $(document).ready(function(event) {
 
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
   var p = 1;
 
   // GENDER
   $("#nextButton").on("click", function(event) {
-    if (p === 1) {
-      FB.getLoginStatus(function(response) {
-        statusChangeCallback(response);
-      });
-    }
+
     if (p<9) {
       $("#id" + p).addClass("hide");
       $("#position" + p).addClass("hide");
