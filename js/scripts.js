@@ -177,6 +177,9 @@ var findVacation = function(gender, preference, taste, alcohol, fun, name, age, 
 // User Interface
 
 $(document).ready(function(event) {
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
 
   var p = 1;
 
